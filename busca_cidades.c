@@ -9,7 +9,6 @@ void toLowerCase(char *str) {
         str[i] = tolower(str[i]);
 }
 
-// Busca linear (case-insensitive)
 int buscaLinear(char cidades[][50], int n, char *alvo) {
     char alvoLower[50];
     strcpy(alvoLower, alvo);
@@ -26,7 +25,6 @@ int buscaLinear(char cidades[][50], int n, char *alvo) {
     return -1;
 }
 
-// Ordena o vetor (bubble sort)
 void ordenar(char cidades[][50], int n) {
     char temp[50];
     for (int i = 0; i < n - 1; i++) {
@@ -40,7 +38,6 @@ void ordenar(char cidades[][50], int n) {
     }
 }
 
-// Busca binária (case-sensitive)
 int buscaBinaria(char cidades[][50], int n, char *alvo) {
     int ini = 0, fim = n - 1;
     while (ini <= fim) {
