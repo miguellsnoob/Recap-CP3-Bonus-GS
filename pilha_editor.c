@@ -53,6 +53,11 @@ int main() {
     empilhar(&historico, "Apagar palavra");
     empilhar(&historico, "Colar parágrafo");
 
-
+    mostrarHistorico(&historico);
+    printf("\n--- Desfazendo operações ---\n");
+    desfazer(&historico);
+    desfazer(&historico);
+    mostrarHistorico(&historico);
+    
     return 0;
 }
