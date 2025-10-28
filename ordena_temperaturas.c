@@ -20,6 +20,13 @@ int main() {
     printf("Temperaturas registradas (antes da ordenação):\n");
     for (int i = 0; i < MAX; i++)
         printf("%.1f ", temp[i]);
+    
+    ordenar(temp, MAX);
+
+    printf("\n\nTemperaturas (depois da ordenação):\n");
+    for (int i = 0; i < MAX; i++)
+        printf("%.1f ", temp[i]);
+    printf("\n");
 
     return 0;
 }
