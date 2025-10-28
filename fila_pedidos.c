@@ -26,6 +26,24 @@ int filaCheia(Fila *f) {
     return f->fim == MAX;
 }
 
+void enfileirar(Fila *f, int numero, char *cliente) {
+    if (!filaCheia(f)) {
+        f->fila[f->fim].numero = numero;
+        strcpy(f->fila[f->fim].cliente, cliente);
+        f->fim++;
+    } else {
+        printf("Fila cheia!\n");
+    }
+}
+
+void desenfileirar(Fila *f) {
+    if (!filaVazia(f)) {
+        printf("Atendendo pedido #%d - %s\n", f->fila[f->inicio].numero, f->fila[f->inicio].cliente);
+        f->inicio++;
+    } else {
+        printf("Fila vazia!\n");
+    }
+}
 
 void mostrarFila(Fila *f) {
     printf("\nPedidos na fila:\n");
